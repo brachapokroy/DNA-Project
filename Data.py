@@ -1,12 +1,11 @@
+# this class contains the data of every sequence it is a static dict so everyone can use it
 class Data:
     counter = 1
     currentData = {}
 
     def __init__(self):
         pass
-        # self.currentData = {}
-        # self.counter = 0
-
+    #    inserts a new sequence to the dict
     def insert_data(self, name, dna):
         for i in dna.string:
             if i not in "ACGTacgt":

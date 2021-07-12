@@ -1,12 +1,14 @@
-import del_command
+import batchlist
 import dup_command
+import find_all_command
+import find_command
+import list_command
 import load_command
 import new_command
-import pair_command
-import save_command
-import slice_command
+from Management_Commands import del_command, save_command
+from Manipulation_Commands import pair_command, slice_command
 
-
+# this class in responsible for directing every command to it's implementing class
 class factory:
     def __init__(self):
         self.commands = {"new": new_command.New_command,
@@ -15,16 +17,22 @@ class factory:
                          "pair": pair_command.Pair_command,
                          "slice": slice_command.Slice_command,
                          "del": del_command.Del_command,
-                         "save": save_command.Sava_command}
+                         "save": save_command.Sava_command,
+                         "find": find_command.Find_command,
+                         "find_all": find_all_command.Find_all_command,
+                         "batchlist":batchlist.Batchlist,
+                         "list":list_command.List
+                         }
 
     def run_command(self, user_input):
         arr = []
         user_input = user_input.split()
         i = 0
+        # append user input to an array after slicing it to words
         while i < len(user_input):
             arr.append(user_input[i])
             i += 1
-
+        # builds an object of the command type
         command = self.commands.get(arr[0])
         try:
             obj = command()

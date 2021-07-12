@@ -21,6 +21,7 @@ class New_command(Icommand):
             New_command.counter += 1
             name = "seq" + str(New_command.counter)
         dna = DnaSequence(string)
+        # the id is the number of the sequence that has been added to the static dict
         id = self.array_data.insert_data(name, dna)
         if id != None:
             return "[{}]".format(id) + " " + name + " :" + "" + string

@@ -1,3 +1,4 @@
+
 class DnaSequence:
     define_string = "ACGTacgt"
 
@@ -17,7 +18,7 @@ class DnaSequence:
             if index >= len(self.string):
                 return "index out of range"
             else:
-                if char not in (DnaSequence.define_string):
+                if char not in DnaSequence.define_string:
                     return "not a valid character"
         except Exception as e:
             print("error", e)
