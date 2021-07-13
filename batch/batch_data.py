@@ -6,5 +6,6 @@ class Batch_data:
         pass
 
     def insert_data(self, name,batch_commands):
+        # gets an array of commands for a certain batch and inserts to the main dict
         self.Batches[name] = batch_commands
 

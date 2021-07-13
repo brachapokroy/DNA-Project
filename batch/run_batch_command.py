@@ -1,8 +1,8 @@
-from batch_data import Batch_data
+from batch.batch_data import Batch_data
 from Icommand import Icommand
 from factory import factory
 
-
+# run a specific batch
 class Run_batch(Icommand):
 
     def __init__(self):

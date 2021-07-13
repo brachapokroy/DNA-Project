@@ -8,4 +8,5 @@ class Batchlist(Icommand):
         pass
 
     def execute(self, args):
+        #returns all keys of dict
         return self.batch_data.Batches.keys()

@@ -1,6 +1,6 @@
-from batch_command import Batch_command
+from batch.batch_command import Batch_command
 from factory import factory
-from run_batch_command import  Run_batch
+from batch.run_batch_command import  Run_batch
 
 
 

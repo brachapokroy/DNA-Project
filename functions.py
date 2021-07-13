@@ -1,4 +1,4 @@
-from Data import Data
+from dna.Data import Data
 
 class Functions:
     def __init__(self):

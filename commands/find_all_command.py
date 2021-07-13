@@ -1,6 +1,6 @@
-from find_command import Find_command
+from commands.find_command import Find_command
 from functions import Functions
-from Data import Data
+from dna.Data import Data
 
 
 class Find_all_command(Functions):
@@ -12,12 +12,14 @@ class Find_all_command(Functions):
     def execute(self, args):
         try:
             indexes = []
+            # checks if it was sent by index or name
             identifier = self.find_identifier(args[0])
             iden = args[0][1:]
-            if isinstance(identifier, int):
+            if isinstance(identifier, int):  # if it's an id thn we will get it's data through his id
                 i = self.find_by_idetifier_id(iden)
-            elif isinstance(identifier, str):
+            elif isinstance(identifier, str):  # if it's a name  then we will get it's data through his name
                 i = self.find_by_idetifier_name(iden)
+            #     checks it the sub string was sent by it's id ar as a string
             if args[1][0] == "#":
                 identifier1 = self.find_identifier(args[1])
                 iden1 = args[1][1:]
@@ -30,9 +32,9 @@ class Find_all_command(Functions):
             else:
                 sub_string = args[1]
                 string = i[1]["string"].string
+            #     puts all the indexes of sub string in string in res
             res = [i for i in range(len(string)) if string.startswith(sub_string, i)]
 
         except Exception as e:
             return ("error", e)
-        Find_command.counter=0
         return res

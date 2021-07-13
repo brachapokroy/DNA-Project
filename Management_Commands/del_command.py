@@ -1,5 +1,5 @@
 
-from Data import Data
+from dna.Data import Data
 from Icommand import Icommand
 from functions import Functions
 

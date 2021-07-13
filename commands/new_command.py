@@ -1,7 +1,5 @@
-from abc import abstractmethod
-
-from DNA import DnaSequence
-from Data import Data
+from dna.DNA import DnaSequence
+from dna.Data import Data
 from Icommand import Icommand
 
 

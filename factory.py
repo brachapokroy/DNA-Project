@@ -1,10 +1,5 @@
-import batchlist
-import dup_command
-import find_all_command
-import find_command
-import list_command
-import load_command
-import new_command
+from batch import batchlist
+from commands import dup_command, find_command, find_all_command, list_command, load_command, new_command
 from Management_Commands import del_command, save_command
 from Manipulation_Commands import pair_command, slice_command
 
@@ -20,8 +15,8 @@ class factory:
                          "save": save_command.Sava_command,
                          "find": find_command.Find_command,
                          "find_all": find_all_command.Find_all_command,
-                         "batchlist":batchlist.Batchlist,
-                         "list":list_command.List
+                         "batchlist": batchlist.Batchlist,
+                         "list": list_command.List
                          }
 
     def run_command(self, user_input):

@@ -1,9 +1,4 @@
-from abc import abstractmethod
-
-from Tools.demo.beer import n
-
-from DNA import DnaSequence
-from Data import Data
+from dna.Data import Data
 from Icommand import Icommand
 from functions import Functions
 

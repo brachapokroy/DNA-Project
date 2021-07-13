@@ -1,4 +1,4 @@
-from DNA import DnaSequence
+from Dna.DNA import DnaSequence
 from Icommand import Icommand
 from functions import Functions
 
